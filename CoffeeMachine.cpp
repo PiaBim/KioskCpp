@@ -18,6 +18,7 @@ int CoffeeMachine::GetCartSize() const {
 }
 
 void CoffeeMachine::CartEmpty() {
+    //카트를 비움
     cart.clear();
 }
 
@@ -67,6 +68,7 @@ void CoffeeMachine::OrderMenu() {
 }
 
 void CoffeeMachine::InShop() {
+    /*true일경우 매장주문*/
     while (true) {
         cout << "==============================================" << endl;
         cout << "1.베스트|2.커피|3.논커피|4.스무디|5.주스|6.디저트" << endl;
@@ -111,6 +113,7 @@ void CoffeeMachine::InShop() {
 }
 
 void CoffeeMachine::OutShop() {
+    /*false일경우 포장주문*/
     while (true) {
         cout << "==============================================" << endl;
         cout << "1.베스트|2.커피|3.논커피|4.스무디|5.주스|6.디저트" << endl;
@@ -206,12 +209,12 @@ void CoffeeMachine::OutShop() {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl; 
             }
         }
     }
@@ -265,11 +268,11 @@ void CoffeeMachine::Smoothie(bool inShop) {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl; 
             }
         }
     }
@@ -323,11 +326,11 @@ void CoffeeMachine::Dessert(bool inShop) {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl;
             }
         }
     }
@@ -382,11 +385,11 @@ void CoffeeMachine::NonCofMenu(bool inShop) {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl;
             }
         }
     }
@@ -441,11 +444,11 @@ void CoffeeMachine::CofMenu(bool inShop) {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl; 
             }
         }
     }
@@ -500,11 +503,11 @@ void CoffeeMachine::BestMenu(bool inShop) {
                 Cof.setPoint(pointValue);
                 cart.emplace_back(Cof);
                 
-                // Add points to MainData
+                
                 mainData->AddPoints(pointValue);
                 mainData->IncrementOrderCount();
                 cout << Cof.GetName() << "를 주문에 추가합니다." << endl;
-                cout << "현재 포인트: " << mainData->GetPoints() << endl; // 포인트 출력
+                cout << "현재 포인트: " << mainData->GetPoints() << endl; 
             }
         }
     }
